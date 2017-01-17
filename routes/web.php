@@ -15,3 +15,4 @@ Route::get('/','PageController@getIndex');
 Route::get('/aboutme', 'PageController@getAboutme');
 Route::get('/contact', 'PageController@getContact');
 Route::resource('posts', 'PostController');
+Route::auth();
