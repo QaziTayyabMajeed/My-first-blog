@@ -9,6 +9,8 @@
 		<div class="col-md-8">
 		    {{Form::label('title', 'Title:')}}
 		    {{Form::text('title' , null , ["class" => 'form-control' ,'input-lg'])}}
+        {{Form::label('slug', 'Slug:' , ['class' => 'form-spacing-top'])}}
+{{Form::text('slug', null , array('class' => 'form-control', 'required' => '','minlength' => '5', 'maxlength' => '255'))}}
 		     {{Form::label('body', 'Body:', ['class' => 'form-spacing-top'])}}
 		    {{Form::textarea('body' , null , ["class" => 'form-control'])}}
 	    </div>
@@ -33,7 +35,7 @@
 			</div>
 
             <div class ="col-sm-6">
-             {{Form::submit('Save Changes' , ['class' => 'btn btn-success btn-block'] )}}
+             {{Form::submit('Save Changes', ['class' => 'btn btn-success btn-block'] )}}
             </div>
           </div>
        </div>
