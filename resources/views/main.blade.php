@@ -5,7 +5,6 @@
   @include('Partials._nav')
       <div class="container">
         @include('Partials._messages')
-{{ Auth::check() ? "logged In" : "Logged Out" }}
       @yield('content')
       
 

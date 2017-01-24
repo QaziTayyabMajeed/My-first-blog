@@ -5,6 +5,10 @@ use App\Post;
 class PageController extends Controller
 {
 
+public function __construct()
+    {
+        $this->middleware('auth');
+    }
  public function getIndex(){
 // \Auth::logout();
  	$posts = Post::orderBy('created_at' , 'desc')->limit(4)->get();

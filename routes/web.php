@@ -24,18 +24,22 @@
  //laravel 5.3﻿
 
 //Route::auth();
+Route::group(['middleware' => ['guest']] , function(){
+Route::get('/', 'HomeController@getIndex');
+Route::get('/about', 'HomeController@getAbout');
+Route::get('/contactme', 'HomeController@getContactme');
+
+});
 Route::group(['middleware' => ['auth']] , function(){
+Route::get('/home','PageController@getIndex');
 Route::get('blog/{slug}',['as' => 'blog.single','uses' => 'BlogController@getSingle'])->where('slug','[\w\d\-\_]+');
-Route::get('blog',['uses' =>'BlogController@getIndex' , 'as' => 'blog.index']);
-Route::get('/','PageController@getIndex');
 Route::get('/aboutme', 'PageController@getAboutme');
 Route::get('/contact', 'PageController@getContact');
 Route::resource('posts', 'PostController');
-
-
-Route::get('/home', 'HomeController@index');
+Route::get('blog',['uses' =>'BlogController@getIndex' , 'as' => 'blog.index']);
 Route::get('logout',['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
 
 // Auth::logout();
 });
+
 Auth::routes();
