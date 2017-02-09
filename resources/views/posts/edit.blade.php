@@ -2,8 +2,22 @@
 
 @section('title' , '| Edit Blog Post')
 
+<header class="intro-header" style="background-image: url({{asset('img/post-sample-image.jpg')}})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                     
+                        <span class="subheading"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 @section('content')
 
+<div class="container">
 <div class="row">
 {!!Form::model($post , ['route' =>['posts.update' , $post->id] , 'method' => 'PUT'])!!}
 		<div class="col-md-8">
@@ -41,6 +55,7 @@
        </div>
     </div>
     {!!Form::close()!!}
+</div>
 </div>
 
 @stop

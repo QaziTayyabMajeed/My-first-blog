@@ -1,10 +1,22 @@
 @extends('main')
 
 @section('Title' , '| Create New Post')
-@section ('stylesheets')
-{!! Html::style('css/parsley.css') !!}
-@endsection
 @section('content')
+
+<header class="intro-header" style="background-image: url({{asset('img/post-sample-image.jpg')}})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Clean Blog</h1>
+                        <hr class="small">
+                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="container">
 <div class ="row">
 	<div class= "col-md-8 col-md-offset-2" >
 	
@@ -29,8 +41,6 @@
 
 
 </div>
+</div>
 
-@endsection
-@section('scripts')
-{!!Html::script('js/parsley.min.js') !!}
 @endsection

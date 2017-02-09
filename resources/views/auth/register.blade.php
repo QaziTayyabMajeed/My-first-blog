@@ -1,5 +1,19 @@
 @extends('layouts.app')
 
+ <header class="intro-header" style="background-image: url('img/reg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <span class="subheading">Not a member yet ?</span>
+                        <hr class="small">
+                        <h2>Register Now</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 @section('content')
 <div class="container">
     <div class="row">

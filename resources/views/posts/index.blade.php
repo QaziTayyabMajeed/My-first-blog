@@ -1,21 +1,23 @@
 @extends('main')
 
 @section('title', '| All Posts')
-
+     <header class="intro-header" style="background-image: url('{{asset('img/post-bg.jpg')}}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                   <div class="page-heading">
+                        <h1>All Posts</h1>
+                        <hr class="small">
+                        <span class="subheading"></span>
+                        <a href="{{ route('posts.create') }}" class="btn btn-sm btn-primary btn-h1-spacing">Create New Post</a>
+            </div>
+                </div>
+            </div>
+        </div>
+    </header>
 @section('content')
 
-<div class="row">
-	<div class="col-md-10">
-	     <h1>All Posts</h1>
-	</div>
-	<div class="col-md-2"> 
-	    <a href="{{ route('posts.create') }}" class="btn btn-lg btn-block btn-primary btn-h1-spacing">Create New Post</a>
-			</div>
-       <hr>
-       <div class="col-md-12">
-       	<hr>
-       </div>
-</div>
+      <div class="container">
 <div class="row">
 	<div class="col-md-12" >
 		<table class="table">
@@ -48,5 +50,6 @@
 			{!! $posts->links(); !!}
 		</div>
 	</div>
+</div>
 </div>
 @stop

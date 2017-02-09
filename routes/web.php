@@ -43,3 +43,7 @@ Route::get('logout',['as' => 'logout', 'uses' => 'Auth\LoginController@logout'])
 });
 
 Auth::routes();
+
+Route::get('test',function(){
+	return view('test');
+});
